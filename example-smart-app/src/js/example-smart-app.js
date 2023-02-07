@@ -71,6 +71,7 @@
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
+          p.age = parseInt(calculateAge(dob));  
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
@@ -107,6 +108,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      allergies: {value: ' '},
     };
   }
 
@@ -150,6 +152,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    $('#allergies').html(p.allergies);
   };
 
 })(window);
