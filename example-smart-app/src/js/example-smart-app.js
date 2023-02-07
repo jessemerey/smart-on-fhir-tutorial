@@ -22,15 +22,15 @@
                     }
                   });
 
-        var all = smart.patient.api.fetchAll({
+        var allergies = smart.patient.api.fetchAll({
             type: 'AllergyIntollerance',
             query: {"patient":smart.patient.id
               }
            });
         
-        $.when(pt, obv, all).fail(onError);
+        $.when(pt, obv, allergies).fail(onError);
 
-        $.when(pt, obv,all).done(function(patient, obv, allergies) {
+        $.when(pt, obv,allergies).done(function(patient, obv, allergies) {
           console.log(patient);
           console.log(obv);
           console.log(allergies);
