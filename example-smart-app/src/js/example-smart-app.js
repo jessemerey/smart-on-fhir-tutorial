@@ -36,7 +36,12 @@
           console.log(allergies);
           var byCodes = smart.byCodes(obv, 'code');
           var gender = patient.gender;
-
+          var dob = new DATE(patient.birthDATE);
+          var day = dob.getDate();
+          var monthIndex = dob.getMonth () + 1;
+          var year = dob.getFullYear ();
+          
+          var dobStr = monthIndex + '/' + day + '/' + year;
           var fname = '';
           var lname = '';
 
