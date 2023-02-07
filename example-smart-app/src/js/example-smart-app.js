@@ -22,7 +22,7 @@
                     }
                   });
 
-        var all = smart.patient.apifetchAll({
+        var all = smart.patient.api.fetchAll({
             type: 'AllergyIntollerance',
             query: {"patient":smart.patient.id,
                     "clinical-status": 'resolved'}
