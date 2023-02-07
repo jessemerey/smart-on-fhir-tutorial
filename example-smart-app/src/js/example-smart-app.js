@@ -24,8 +24,8 @@
 
         var all = smart.patient.api.fetchAll({
             type: 'AllergyIntollerance',
-            query: {"patient":smart.patient.id,
-                    "clinical-status": 'active'}
+            query: {"patient":smart.patient.id
+              }
            });
         
         $.when(pt, obv, all).fail(onError);
