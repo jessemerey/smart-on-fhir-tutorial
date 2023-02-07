@@ -45,13 +45,28 @@
             lname = patient.name[0].family;
           }
 
+          for 
+          
           var height = byCodes('8302-2');
           var systolicbp = getBloodPressureValue(byCodes('85354-9'),'8480-6');
           var diastolicbp = getBloodPressureValue(byCodes('85354-9'),'8462-4');
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
-
+          var allergyTable = "<table>";
+          var allergyLen = allergies.length;
+          for (var 1=0; i<allergyLen; i++) {
+            var reactionStr = [];
+            if(allergies[i].reaction !== undefined) {
+            for var j=0, jLen=allergies[i].reactionlength;j<jLen;j++)
+            reactionStr.push(allergies[i].reaction[j].mainfestation[0].text);
+            }
+            
+           allergyTable += "<tr><td>"+allergies[i].code.text+"</td><td>"+reactionStr.join(",")+"</td></tr>";
+            ;
+            if (allergyTable += "</table>";
+                
           var p = defaultPatient();
+          p.allergies = allergyTable;  
           p.birthdate = patient.birthDate;
           p.gender = gender;
           p.fname = fname;
