@@ -31,7 +31,7 @@
         $.when(pt, obv, all).fail(onError);
 
         $.when(pt, obv,all).done(function(patient, obv, allergies) {
-          console.log(patient0;
+          console.log(patient);
           console.log(obv);
           console.log(allergies);
           var byCodes = smart.byCodes(obv, 'code');
