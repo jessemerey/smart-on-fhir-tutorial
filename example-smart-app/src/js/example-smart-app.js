@@ -113,7 +113,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
-      allergies: {value: ' '},
+      allergies: {value: ''},
     };
   }
 
